@@ -20,7 +20,7 @@ class Swiper extends React.Component {
       previousCardX: new Animated.Value(newProps.previousCardInitialPositionX),
       previousCardY: new Animated.Value(newProps.previousCardInitialPositionY),
       swipedAllCards: false,
-      secondCardIndex: newProps.cards.length === 1 ? 0 : 1,
+      secondCardIndex: newProps.cards.length === 1 ? 0 : (((newProps.cardIndex) || 0) + 1),
       previousCardIndex:
       newProps.cards.length === 1 ? 0 : newProps.cards.length - 1,
       panResponderLocked: newProps.cards && newProps.cards.length === 0,
