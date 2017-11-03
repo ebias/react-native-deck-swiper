@@ -132,13 +132,13 @@ class Swiper extends React.Component {
 			isSwipingTop,
 			isSwipingBottom;
 
-		if (this._animatedValueX > this._animatedValueY && Math.abs(this._animatedValueX) > overlayOpacityHorizontalThreshold) {
+		if (Math.abs(this._animatedValueX) > Math.abs(this._animatedValueY) && Math.abs(this._animatedValueX) > overlayOpacityHorizontalThreshold) {
 			if (this._animatedValueX > 0)
 				isSwipingRight = true;
 			else
 				isSwipingLeft = true;	
 		}
-		else if (this._animatedValueY > this._animatedValueX && Math.abs(this._animatedValueY) > overlayOpacityVerticalThreshold) {
+		else if (Math.abs(this._animatedValueY) > Math.abs(this._animatedValueX) && Math.abs(this._animatedValueY) > overlayOpacityVerticalThreshold) {
 			if (this._animatedValueY > 0)
 				isSwipingBottom = true;
 			else
