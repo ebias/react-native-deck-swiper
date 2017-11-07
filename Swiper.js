@@ -125,7 +125,6 @@ class Swiper extends React.Component {
 		let { overlayOpacityHorizontalThreshold, overlayOpacityVerticalThreshold } = this.props
 		if (!overlayOpacityHorizontalThreshold) overlayOpacityHorizontalThreshold = this.props.horizontalThreshold;
 		if (!overlayOpacityVerticalThreshold) overlayOpacityVerticalThreshold = this.props.verticalThreshold;
-		console.log(this._animatedValueX, this._animatedValueY);
 
 		let isSwipingLeft,
 			isSwipingRight,
@@ -144,11 +143,6 @@ class Swiper extends React.Component {
 			else
 				isSwipingTop = true;	
 		}
-
-		console.log(isSwipingLeft,
-			isSwipingRight,
-			isSwipingTop,
-			isSwipingBottom);
 
 		if (isSwipingRight) {
 			this.setState({ labelType: LABEL_TYPES.RIGHT })
